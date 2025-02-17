@@ -42,13 +42,6 @@ app.delete('/api/persons/:id', (request, response, next) => {
     .catch(error => next(error))
 })
 
-const generateId = () => {
-  const Id = persons.length > 0
-    ? Math.floor(Math.random() * 10001)
-    : 0
-  return String(Id)
-}
-
 app.post('/api/persons', (request, response, next) => {
     const body = request.body
   
